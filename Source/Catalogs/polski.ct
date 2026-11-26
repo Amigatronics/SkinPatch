@@ -1,0 +1,100 @@
+## version $VER: skinprefs.catalog 1.4 (23.11.2026)
+## language polski
+## codeset 0
+;
+MSG_SKINS
+Skórki
+; Skins
+;
+MSG_HEIGHT
+Wysoko¶æ paska tytu³u
+; Title bar height
+;
+MSG_ENABLED
+W³±czone
+; Enabled
+;
+MSG_ALLSCREENS
+Wszystkie ekrany
+; All screens
+;
+MSG_PREVIEW
+Podgl±d
+; Preview
+;
+MSG_NOPREVIEW
+(brak podgl±du)
+; (no preview)
+;
+MSG_SAVE
+Zapisz
+; Save
+;
+MSG_TEST
+Testuj
+; Test
+;
+MSG_USE
+U¿yj
+; Use
+;
+MSG_CANCEL
+Anuluj
+; Cancel
+;
+MSG_AUTOMATIC
+Automatyczna
+; Automatic
+;
+MSG_FRAME_DEFAULT
+Ramka: domy¶lna (8)
+; Frame: default (8)
+;
+MSG_FRAME_4
+Ramka: 4 piksele
+; Frame: 4 pixels
+;
+MSG_FRAME_6
+Ramka: 6 pikseli
+; Frame: 6 pixels
+;
+MSG_FRAME_8
+Ramka: 8 pikseli
+; Frame: 8 pixels
+;
+MSG_FRAME_10
+Ramka: 10 pikseli
+; Frame: 10 pixels
+;
+MSG_FRAME_12
+Ramka: 12 pikseli
+; Frame: 12 pixels
+;
+MSG_FRAME_14
+Ramka: 14 pikseli
+; Frame: 14 pixels
+;
+MSG_FRAME_16
+Ramka: 16 pikseli
+; Frame: 16 pixels
+;
+MSG_CHECKUPDATES
+Sprawd¼ aktualizacje
+; Check for updates
+;
+MSG_UP_LATEST
+Masz najnowsz± wersjê (%s).
+; You have the latest version (%s).
+;
+MSG_UP_NEW
+Dostêpna jest nowa wersja: %s\n(masz %s)\n\nPobierz j± z Aminetu (util/wb/SkinPatch.lha)\nlub przez Hangar.
+; A new version is available: %s\n(you have %s)\n\nGet it from Aminet (util/wb/SkinPatch.lha)\nor with Hangar.
+;
+MSG_UP_FAIL
+Nie mo¿na sprawdziæ aktualizacji.\n\nCzy Amiga jest pod³±czona do Internetu\n(stos TCP/IP uruchomiony)?
+; Could not check for updates.\n\nIs the Amiga connected to the Internet\n(TCP/IP stack running)?
+;
+MSG_OK
+OK
+; OK
+;

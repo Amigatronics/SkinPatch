@@ -1,0 +1,100 @@
+## version $VER: skinprefs.catalog 1.4 (23.11.2026)
+## language euskara
+## codeset 0
+;
+MSG_SKINS
+Azalak
+; Skins
+;
+MSG_HEIGHT
+Titulu-barraren altuera
+; Title bar height
+;
+MSG_ENABLED
+Gaituta
+; Enabled
+;
+MSG_ALLSCREENS
+Pantaila guztiak
+; All screens
+;
+MSG_PREVIEW
+Aurrebista
+; Preview
+;
+MSG_NOPREVIEW
+(aurrebistarik ez)
+; (no preview)
+;
+MSG_SAVE
+Gorde
+; Save
+;
+MSG_TEST
+Probatu
+; Test
+;
+MSG_USE
+Erabili
+; Use
+;
+MSG_CANCEL
+Utzi
+; Cancel
+;
+MSG_AUTOMATIC
+Automatikoa
+; Automatic
+;
+MSG_FRAME_DEFAULT
+Markoa: lehenet. (8)
+; Frame: default (8)
+;
+MSG_FRAME_4
+Markoa: 4 pixel
+; Frame: 4 pixels
+;
+MSG_FRAME_6
+Markoa: 6 pixel
+; Frame: 6 pixels
+;
+MSG_FRAME_8
+Markoa: 8 pixel
+; Frame: 8 pixels
+;
+MSG_FRAME_10
+Markoa: 10 pixel
+; Frame: 10 pixels
+;
+MSG_FRAME_12
+Markoa: 12 pixel
+; Frame: 12 pixels
+;
+MSG_FRAME_14
+Markoa: 14 pixel
+; Frame: 14 pixels
+;
+MSG_FRAME_16
+Markoa: 16 pixel
+; Frame: 16 pixels
+;
+MSG_CHECKUPDATES
+Bilatu eguneraketak
+; Check for updates
+;
+MSG_UP_LATEST
+Azken bertsioa duzu (%s).
+; You have the latest version (%s).
+;
+MSG_UP_NEW
+Bertsio berria dago: %s\n(%s duzu)\n\nJaitsi Aminetetik (util/wb/SkinPatch.lha)\nedo Hangar bidez.
+; A new version is available: %s\n(you have %s)\n\nGet it from Aminet (util/wb/SkinPatch.lha)\nor with Hangar.
+;
+MSG_UP_FAIL
+Ezin izan dira eguneraketak bilatu.\n\nAmiga Internetera konektatuta dago\n(TCP/IP pila martxan)?
+; Could not check for updates.\n\nIs the Amiga connected to the Internet\n(TCP/IP stack running)?
+;
+MSG_OK
+Ados
+; OK
+;

@@ -1,0 +1,100 @@
+## version $VER: skinprefs.catalog 1.4 (23.11.2026)
+## language español
+## codeset 0
+;
+MSG_SKINS
+Skins
+; Skins
+;
+MSG_HEIGHT
+Altura de la barra
+; Title bar height
+;
+MSG_ENABLED
+Activado
+; Enabled
+;
+MSG_ALLSCREENS
+Todas las pantallas
+; All screens
+;
+MSG_PREVIEW
+Vista previa
+; Preview
+;
+MSG_NOPREVIEW
+(sin vista previa)
+; (no preview)
+;
+MSG_SAVE
+Guardar
+; Save
+;
+MSG_TEST
+Probar
+; Test
+;
+MSG_USE
+Usar
+; Use
+;
+MSG_CANCEL
+Cancelar
+; Cancel
+;
+MSG_AUTOMATIC
+Automática
+; Automatic
+;
+MSG_FRAME_DEFAULT
+Marco: normal (8)
+; Frame: default (8)
+;
+MSG_FRAME_4
+Marco: 4 píxeles
+; Frame: 4 pixels
+;
+MSG_FRAME_6
+Marco: 6 píxeles
+; Frame: 6 pixels
+;
+MSG_FRAME_8
+Marco: 8 píxeles
+; Frame: 8 pixels
+;
+MSG_FRAME_10
+Marco: 10 píxeles
+; Frame: 10 pixels
+;
+MSG_FRAME_12
+Marco: 12 píxeles
+; Frame: 12 pixels
+;
+MSG_FRAME_14
+Marco: 14 píxeles
+; Frame: 14 pixels
+;
+MSG_FRAME_16
+Marco: 16 píxeles
+; Frame: 16 pixels
+;
+MSG_CHECKUPDATES
+Buscar actualizaciones
+; Check for updates
+;
+MSG_UP_LATEST
+Tienes la última versión (%s).
+; You have the latest version (%s).
+;
+MSG_UP_NEW
+Hay una versión nueva: %s\n(tienes la %s)\n\nDescárgala de Aminet (util/wb/SkinPatch.lha)\no con Hangar.
+; A new version is available: %s\n(you have %s)\n\nGet it from Aminet (util/wb/SkinPatch.lha)\nor with Hangar.
+;
+MSG_UP_FAIL
+No se han podido buscar actualizaciones.\n\n¿Está el Amiga conectado a Internet\n(con la pila TCP/IP en marcha)?
+; Could not check for updates.\n\nIs the Amiga connected to the Internet\n(TCP/IP stack running)?
+;
+MSG_OK
+Vale
+; OK
+;

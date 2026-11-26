@@ -1,0 +1,76 @@
+; skinprefs.cd - SkinPrefs 1.4 (Amigatronics)
+#language english
+#version 1
+;
+MSG_SKINS (1//)
+Skins
+;
+MSG_HEIGHT (2//)
+Title bar height
+;
+MSG_ENABLED (3//)
+Enabled
+;
+MSG_ALLSCREENS (4//)
+All screens
+;
+MSG_PREVIEW (5//)
+Preview
+;
+MSG_NOPREVIEW (6//)
+(no preview)
+;
+MSG_SAVE (7//)
+Save
+;
+MSG_TEST (8//)
+Test
+;
+MSG_USE (9//)
+Use
+;
+MSG_CANCEL (10//)
+Cancel
+;
+MSG_AUTOMATIC (11//)
+Automatic
+;
+MSG_FRAME_DEFAULT (12//)
+Frame: default (8)
+;
+MSG_FRAME_4 (13//)
+Frame: 4 pixels
+;
+MSG_FRAME_6 (14//)
+Frame: 6 pixels
+;
+MSG_FRAME_8 (15//)
+Frame: 8 pixels
+;
+MSG_FRAME_10 (16//)
+Frame: 10 pixels
+;
+MSG_FRAME_12 (17//)
+Frame: 12 pixels
+;
+MSG_FRAME_14 (18//)
+Frame: 14 pixels
+;
+MSG_FRAME_16 (19//)
+Frame: 16 pixels
+;
+MSG_CHECKUPDATES (20//)
+Check for updates
+;
+MSG_UP_LATEST (21//)
+You have the latest version (%s).
+;
+MSG_UP_NEW (22//)
+A new version is available: %s\n(you have %s)\n\nGet it from Aminet (util/wb/SkinPatch.lha)\nor with Hangar.
+;
+MSG_UP_FAIL (23//)
+Could not check for updates.\n\nIs the Amiga connected to the Internet\n(TCP/IP stack running)?
+;
+MSG_OK (24//)
+OK
+;
