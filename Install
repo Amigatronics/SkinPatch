@@ -1,0 +1,122 @@
+;
+; SkinPatch 1.4 installer - Amigatronics
+;
+(set @app-name "SkinPatch")
+(set @default-dest "SYS:Prefs")
+(set #ver "1.4")
+; Find the drawer that holds the files (it contains SkinPrefs and Skins).
+(set #found 0)
+(set #src "")
+(procedure P_TRY
+  (if (= #found 0)
+    (if (= (exists (tackon #try "SkinPrefs")) 1)
+      (if (= (exists (tackon #try "Skins")) 2)
+        (
+          (set #src (expandpath #try))
+          (set #found 1)
+        )))))
+(set #try (pathonly @icon))                      (P_TRY)
+(set #try (tackon (pathonly @icon) "SkinPatch"))  (P_TRY)
+(set #try "SkinPatch")                           (P_TRY)
+(set #try "")                                    (P_TRY)
+(if (= #found 0)
+  (set #src
+    (askdir
+      (prompt "Cannot find the SkinPatch files.\n\nPlease select the SkinPatch drawer (the one that contains SkinPrefs and Skins).")
+      (help @askdir-help)
+      (default "SYS:"))))
+(if (= #src "") (set #srcname "(current directory)") (set #srcname #src))
+
+; ---- language: the one of the system is selected by default
+(set #ln 0)
+(set #i 0)
+(while (< #i 9)
+  (
+    (if (= @language (select #i "english" "español" "deutsch" "italiano" "français" "polski" "català" "euskara" "galego")) (set #ln #i))
+    (set #i (+ #i 1))
+  ))
+(set #ln
+  (askchoice
+    (prompt "Language / Idioma / Sprache / Lingua / Langue / Jezyk / Hizkuntza")
+    (help "SkinPrefs and the messages of this installer will use this language. You can change it later by running the installer again.")
+    (choices "English" "Español" "Deutsch" "Italiano" "Français" "Polski" "Català" "Euskara" "Galego")
+    (default #ln)))
+(set #lang (select #ln "english" "español" "deutsch" "italiano" "français" "polski" "català" "euskara" "galego"))
+
+(welcome (select #ln "Welcome to the SkinPatch " #ver " installation\nby Amigatronics" "Bienvenido a la instalación de SkinPatch " #ver "\nde Amigatronics" "Willkommen bei der Installation von SkinPatch " #ver "\nvon Amigatronics" "Benvenuto nell'installazione di SkinPatch " #ver "\ndi Amigatronics" "Bienvenue dans l'installation de SkinPatch " #ver "\npar Amigatronics" "Witamy w instalacji SkinPatch " #ver "\nod Amigatronics" "Benvingut a la instal·lació de SkinPatch " #ver "\nd'Amigatronics" "Ongi etorri SkinPatch " #ver " instalaziora\nAmigatronics-en eskutik" "Benvido á instalación de SkinPatch " #ver "\nde Amigatronics"))
+
+(message (cat (select #ln "SkinPatch " #ver "\nWindow skins for AmigaOS 3.x\n\nby Amigatronics\namigatronics.com / en.amigatronics.com\n\nThis will install:\n\n  SkinPatch   in C:\n  SkinPrefs   in SYS:Prefs\n  Skins       in SYS:Prefs/Skins\n  Catalogs    in LOCALE:Catalogs\n\nand add SkinPatch to S:User-Startup.\n\nInstalling from: " "SkinPatch " #ver "\nSkins de ventanas para AmigaOS 3.x\n\nde Amigatronics\namigatronics.com / en.amigatronics.com\n\nSe instalará:\n\n  SkinPatch   en C:\n  SkinPrefs   en SYS:Prefs\n  Skins       en SYS:Prefs/Skins\n  Catálogos   en LOCALE:Catalogs\n\ny se añadirá SkinPatch a S:User-Startup.\n\nInstalando desde: " "SkinPatch " #ver "\nFenster-Skins für AmigaOS 3.x\n\nvon Amigatronics\namigatronics.com / en.amigatronics.com\n\nInstalliert wird:\n\n  SkinPatch   nach C:\n  SkinPrefs   nach SYS:Prefs\n  Skins       nach SYS:Prefs/Skins\n  Kataloge    nach LOCALE:Catalogs\n\nund SkinPatch wird in S:User-Startup eingetragen.\n\nInstallation von: " "SkinPatch " #ver "\nSkin per le finestre di AmigaOS 3.x\n\ndi Amigatronics\namigatronics.com / en.amigatronics.com\n\nVerranno installati:\n\n  SkinPatch   in C:\n  SkinPrefs   in SYS:Prefs\n  Skin        in SYS:Prefs/Skins\n  Cataloghi   in LOCALE:Catalogs\n\ne SkinPatch verrà aggiunto a S:User-Startup.\n\nInstallazione da: " "SkinPatch " #ver "\nSkins de fenêtres pour AmigaOS 3.x\n\npar Amigatronics\namigatronics.com / en.amigatronics.com\n\nSeront installés :\n\n  SkinPatch   dans C:\n  SkinPrefs   dans SYS:Prefs\n  Skins       dans SYS:Prefs/Skins\n  Catalogues  dans LOCALE:Catalogs\n\net SkinPatch sera ajouté à S:User-Startup.\n\nInstallation depuis : " "SkinPatch " #ver "\nSkórki okien dla AmigaOS 3.x\n\nod Amigatronics\namigatronics.com / en.amigatronics.com\n\nZostan± zainstalowane:\n\n  SkinPatch   w C:\n  SkinPrefs   w SYS:Prefs\n  Skórki      w SYS:Prefs/Skins\n  Katalogi    w LOCALE:Catalogs\n\na SkinPatch zostanie dodany do S:User-Startup.\n\nInstalacja z: " "SkinPatch " #ver "\nSkins de finestres per a AmigaOS 3.x\n\nd'Amigatronics\namigatronics.com / en.amigatronics.com\n\nS'instal·larà:\n\n  SkinPatch   a C:\n  SkinPrefs   a SYS:Prefs\n  Skins       a SYS:Prefs/Skins\n  Catàlegs    a LOCALE:Catalogs\n\ni s'afegirà SkinPatch a S:User-Startup.\n\nS'instal·la des de: " "SkinPatch " #ver "\nAmigaOS 3.x-ko leihoen azalak\n\nAmigatronics-en eskutik\namigatronics.com / en.amigatronics.com\n\nHau instalatuko da:\n\n  SkinPatch   C:-n\n  SkinPrefs   SYS:Prefs-en\n  Azalak      SYS:Prefs/Skins-en\n  Katalogoak  LOCALE:Catalogs-en\n\neta SkinPatch S:User-Startup-era gehituko da.\n\nHemendik instalatzen: " "SkinPatch " #ver "\nSkins de xanelas para AmigaOS 3.x\n\nde Amigatronics\namigatronics.com / en.amigatronics.com\n\nInstalarase:\n\n  SkinPatch   en C:\n  SkinPrefs   en SYS:Prefs\n  Skins       en SYS:Prefs/Skins\n  Catálogos   en LOCALE:Catalogs\n\ne engadirase SkinPatch a S:User-Startup.\n\nInstalando desde: ") #srcname))
+
+(if (= (exists "C:SkinPatch") 2)
+  (abort (select #ln "There is a DIRECTORY called C:SkinPatch (left by an older failed installation).\n\nDelete it from a Shell with:\n  Delete C:SkinPatch ALL\nand run the installer again." "Hay un CAJÓN llamado C:SkinPatch (de una instalación anterior que falló).\n\nBórralo desde una Shell con:\n  Delete C:SkinPatch ALL\ny vuelve a ejecutar el instalador." "Es gibt eine SCHUBLADE namens C:SkinPatch (von einer früheren, fehlgeschlagenen Installation).\n\nLöschen Sie sie in einer Shell mit:\n  Delete C:SkinPatch ALL\nund starten Sie die Installation erneut." "Esiste un CASSETTO chiamato C:SkinPatch (lasciato da un'installazione precedente non riuscita).\n\nCancellalo da una Shell con:\n  Delete C:SkinPatch ALL\ne avvia di nuovo l'installazione." "Il existe un TIROIR nommé C:SkinPatch (laissé par une installation précédente échouée).\n\nSupprimez-le depuis un Shell avec :\n  Delete C:SkinPatch ALL\npuis relancez l'installation." "Istnieje KATALOG o nazwie C:SkinPatch (pozosta³ po nieudanej instalacji).\n\nUsuñ go z poziomu Shella poleceniem:\n  Delete C:SkinPatch ALL\ni uruchom instalacjê ponownie." "Hi ha un CALAIX anomenat C:SkinPatch (d'una instal·lació anterior que va fallar).\n\nEsborra'l des d'una Shell amb:\n  Delete C:SkinPatch ALL\ni torna a executar l'instal·lador." "C:SkinPatch izeneko KARPETA bat dago (huts egindako aurreko instalazio batena).\n\nEzabatu Shell batetik honela:\n  Delete C:SkinPatch ALL\neta abiarazi berriro instalatzailea." "Hai un CAIXÓN chamado C:SkinPatch (dunha instalación anterior que fallou).\n\nBórrao desde unha Shell con:\n  Delete C:SkinPatch ALL\ne executa de novo o instalador.")))
+
+(set #running 0)
+(if (exists "C:SkinPatch") (set #running 1))
+
+(complete 10)
+; Copy with the AmigaDOS Copy command (copyfiles fails on some systems)
+(procedure P_COPY
+  (working #what)
+  (if (<> (run #cmd) 0)
+    (abort (cat (select #ln "Could not copy " "No se ha podido copiar " "Kopieren fehlgeschlagen: " "Impossibile copiare " "Impossible de copier " "Nie mo¿na skopiowaæ: " "No s'ha pogut copiar " "Ezin izan da kopiatu: " "Non se puido copiar ") #what ".\n\n" #cmd))))
+
+(set #what (select #ln "SkinPatch to C:" "SkinPatch en C:" "SkinPatch nach C:" "SkinPatch in C:" "SkinPatch dans C:" "SkinPatch do C:" "SkinPatch a C:" "SkinPatch C:-ra" "SkinPatch en C:"))
+(set #cmd (cat "Copy \"" (tackon #src "SkinPatch") "\" C: CLONE QUIET"))
+(P_COPY)
+
+(complete 25)
+(set #what (select #ln "SkinPrefs to SYS:Prefs" "SkinPrefs en SYS:Prefs" "SkinPrefs nach SYS:Prefs" "SkinPrefs in SYS:Prefs" "SkinPrefs dans SYS:Prefs" "SkinPrefs do SYS:Prefs" "SkinPrefs a SYS:Prefs" "SkinPrefs SYS:Prefs-era" "SkinPrefs en SYS:Prefs"))
+(set #cmd (cat "Copy \"" (tackon #src "SkinPrefs#?") "\" SYS:Prefs CLONE QUIET"))
+(P_COPY)
+
+(complete 45)
+(if (= (exists "SYS:Prefs/Skins") 0)
+  (makedir "SYS:Prefs/Skins"))
+(set #what (select #ln "the skins to SYS:Prefs/Skins" "las skins en SYS:Prefs/Skins" "die Skins nach SYS:Prefs/Skins" "le skin in SYS:Prefs/Skins" "les skins dans SYS:Prefs/Skins" "skórki do SYS:Prefs/Skins" "les skins a SYS:Prefs/Skins" "azalak SYS:Prefs/Skins-era" "as skins en SYS:Prefs/Skins"))
+(set #cmd (cat "Copy \"" (tackon #src "Skins") "\" SYS:Prefs/Skins ALL CLONE QUIET"))
+(P_COPY)
+
+(complete 60)
+; translations: in LOCALE:Catalogs, or next to SkinPrefs if there is no LOCALE:
+(set #what (select #ln "the catalogs to LOCALE:Catalogs" "los catálogos en LOCALE:Catalogs" "die Kataloge nach LOCALE:Catalogs" "i cataloghi in LOCALE:Catalogs" "les catalogues dans LOCALE:Catalogs" "katalogi do LOCALE:Catalogs" "els catàlegs a LOCALE:Catalogs" "katalogoak LOCALE:Catalogs-era" "os catálogos en LOCALE:Catalogs"))
+(if (= (exists "LOCALE:Catalogs" (noreq)) 2)
+  (set #catdest "LOCALE:Catalogs")
+  (
+    (if (= (exists "SYS:Prefs/Catalogs" (noreq)) 0) (makedir "SYS:Prefs/Catalogs"))
+    (set #catdest "SYS:Prefs/Catalogs")
+  ))
+(set #cmd (cat "Copy \"" (tackon #src "Catalogs") "\" " #catdest " ALL CLONE QUIET"))
+(P_COPY)
+; the language chosen here, for SkinPrefs
+(textfile (dest "ENVARC:SkinPatch.language") (append #lang))
+(textfile (dest "ENV:SkinPatch.language") (append #lang))
+
+(complete 70)
+; default settings (Ofour skin) only if there are none yet
+(if (= (exists "ENVARC:SkinPatch.prefs") 0)
+  (
+    (set #what (select #ln "the default settings" "los ajustes por defecto" "die Standardeinstellungen" "le impostazioni predefinite" "les réglages par défaut" "ustawienia domy¶lne" "els ajustos per defecte" "ezarpen lehenetsiak" "os axustes predeterminados"))
+    (set #cmd (cat "Copy \"" (tackon #src "Defaults/SkinPatch.prefs") "\" ENVARC: QUIET"))
+    (P_COPY)
+    (set #cmd (cat "Copy \"" (tackon #src "Defaults/SkinPatch.prefs") "\" ENV: QUIET"))
+    (P_COPY)
+  ))
+
+(complete 85)
+(startup "SkinPatch"
+  (prompt (select #ln "SkinPatch will be added to S:User-Startup so it starts automatically." "Se añadirá SkinPatch a S:User-Startup para que arranque automáticamente." "SkinPatch wird in S:User-Startup eingetragen, damit es automatisch startet." "SkinPatch verrà aggiunto a S:User-Startup per avviarsi automaticamente." "SkinPatch sera ajouté à S:User-Startup pour démarrer automatiquement." "SkinPatch zostanie dodany do S:User-Startup, aby uruchamia³ siê automatycznie." "S'afegirà SkinPatch a S:User-Startup perquè s'iniciï automàticament." "SkinPatch S:User-Startup-era gehituko da, automatikoki abiarazteko." "Engadirase SkinPatch a S:User-Startup para que arranque automaticamente."))
+  (help @startup-help)
+  (command "Run >NIL: C:SkinPatch"))
+
+(complete 95)
+(if (= #running 1)
+  (message (select #ln "SkinPatch was already installed.\n\nPlease REBOOT your Amiga to use the new version." "SkinPatch ya estaba instalado.\n\nREINICIA el Amiga para usar la versión nueva." "SkinPatch war bereits installiert.\n\nBitte starten Sie den Amiga NEU, um die neue Version zu verwenden." "SkinPatch era già installato.\n\nRIAVVIA l'Amiga per usare la nuova versione." "SkinPatch était déjà installé.\n\nREDÉMARREZ votre Amiga pour utiliser la nouvelle version." "SkinPatch by³ ju¿ zainstalowany.\n\nZRESTARTUJ Amigê, aby u¿ywaæ nowej wersji." "SkinPatch ja estava instal·lat.\n\nREINICIA l'Amiga per fer servir la versió nova." "SkinPatch instalatuta zegoen jada.\n\nBERRABIARAZI Amiga bertsio berria erabiltzeko." "SkinPatch xa estaba instalado.\n\nREINICIA o Amiga para usar a versión nova."))
+  (if (askbool
+        (prompt (select #ln "Start SkinPatch now?\n\n(Windows that are already open keep their look until you close and reopen them.)" "¿Arrancar SkinPatch ahora?\n\n(Las ventanas que ya están abiertas no cambian hasta que las cierres y las vuelvas a abrir.)" "SkinPatch jetzt starten?\n\n(Bereits geöffnete Fenster behalten ihr Aussehen, bis sie geschlossen und neu geöffnet werden.)" "Avviare SkinPatch adesso?\n\n(Le finestre già aperte mantengono il loro aspetto finché non le chiudi e riapri.)" "Démarrer SkinPatch maintenant ?\n\n(Les fenêtres déjà ouvertes gardent leur aspect jusqu'à ce que vous les fermiez et rouvriez.)" "Uruchomiæ SkinPatch teraz?\n\n(Okna ju¿ otwarte zachowaj± wygl±d, dopóki ich nie zamkniesz i nie otworzysz ponownie.)" "Vols iniciar SkinPatch ara?\n\n(Les finestres que ja estan obertes no canvien fins que les tanquis i les tornis a obrir.)" "SkinPatch orain abiarazi?\n\n(Irekita dauden leihoek itxura bera izango dute itxi eta berriro ireki arte.)" "Arrincar SkinPatch agora?\n\n(As xanelas que xa están abertas non cambian ata que as peches e as volvas abrir.)"))
+        (help (select #ln "SkinPatch uses the skin chosen in SkinPrefs (Ofour by default)." "SkinPatch usa la skin elegida en SkinPrefs (Ofour por defecto)." "SkinPatch verwendet den in SkinPrefs gewählten Skin (standardmäßig Ofour)." "SkinPatch usa la skin scelta in SkinPrefs (Ofour come predefinita)." "SkinPatch utilise le skin choisi dans SkinPrefs (Ofour par défaut)." "SkinPatch u¿ywa skórki wybranej w SkinPrefs (domy¶lnie Ofour)." "SkinPatch fa servir la skin triada a SkinPrefs (Ofour per defecte)." "SkinPatch-ek SkinPrefs-en aukeratutako azala erabiltzen du (Ofour lehenetsita)." "SkinPatch usa a skin escollida en SkinPrefs (Ofour por defecto)."))
+        (choices (select #ln "Yes" "Sí" "Ja" "Sì" "Oui" "Tak" "Sí" "Bai" "Si") (select #ln "No" "No" "Nein" "No" "Non" "Nie" "No" "Ez" "Non"))
+        (default 1))
+    (run "Run >NIL: C:SkinPatch")))
+
+(complete 100)
+(exit (cat (select #ln "SkinPatch is installed.\n\nOpen SYS:Prefs/SkinPrefs to choose the skin, the title bar height and the frame width." "SkinPatch está instalado.\n\nAbre SYS:Prefs/SkinPrefs para elegir la skin, la altura de la barra de título y el ancho del marco." "SkinPatch ist installiert.\n\nÖffnen Sie SYS:Prefs/SkinPrefs, um Skin, Titelleistenhöhe und Rahmenbreite zu wählen." "SkinPatch è installato.\n\nApri SYS:Prefs/SkinPrefs per scegliere la skin, l'altezza della barra del titolo e lo spessore del bordo." "SkinPatch est installé.\n\nOuvrez SYS:Prefs/SkinPrefs pour choisir le skin, la hauteur de la barre de titre et la largeur du cadre." "SkinPatch zosta³ zainstalowany.\n\nOtwórz SYS:Prefs/SkinPrefs, aby wybraæ skórkê, wysoko¶æ paska tytu³u i szeroko¶æ ramki." "SkinPatch està instal·lat.\n\nObre SYS:Prefs/SkinPrefs per triar la skin, l'alçada de la barra de títol i l'amplada del marc." "SkinPatch instalatuta dago.\n\nIreki SYS:Prefs/SkinPrefs azala, titulu-barraren altuera eta markoaren zabalera aukeratzeko." "SkinPatch está instalado.\n\nAbre SYS:Prefs/SkinPrefs para escoller a skin, a altura da barra de título e o ancho do marco.") "\n\n" (select #ln "The documentation in your language is in the Docs drawer:\n  " "La documentación en tu idioma está en el cajón Docs:\n  " "Die Anleitung in Ihrer Sprache liegt in der Schublade Docs:\n  " "La documentazione nella tua lingua è nel cassetto Docs:\n  " "La documentation dans votre langue est dans le tiroir Docs :\n  " "Dokumentacja w Twoim jêzyku jest w katalogu Docs:\n  " "La documentació en el teu idioma és al calaix Docs:\n  " "Zure hizkuntzako dokumentazioa Docs karpetan dago:\n  " "A documentación no teu idioma está no caixón Docs:\n  ") (tackon (tackon #src "Docs") (select #ln "ReadMe.txt" "LeemeES.txt" "LiesmichDE.txt" "LeggimiIT.txt" "LisezmoiFR.txt" "CzytajPL.txt" "LlegeixmeCA.txt" "IrakurriEU.txt" "LeameGL.txt"))))
