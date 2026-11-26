@@ -1,0 +1,75 @@
+SkinPatch 1.4 - skórki okien dla AmigaOS 3.x
+============================================
+
+Isra Ortuno (Gogeta) - Amigatronics
+https://amigatronics.com  /  https://en.amigatronics.com
+amigatronics@amigatronics.com
+
+Napisany w asemblerze 68000 z pomoc± Claude (SI firmy Anthropic).
+
+
+Co robi
+-------
+SkinPatch zmienia wygl±d okien na ekranie Workbencha w stylu skórek
+MorphOS:
+
+  - gad¿ety okien: zamykanie, g³êbia, zoom, ikonifikacja, g³êbia ekranu,
+    zmiana rozmiaru i strza³ki przewijania
+  - pasek tytu³u (t³o z gradientem i wy¶rodkowany tytu³)
+  - ramki okien (lewa, prawa i dolna)
+  - paski przewijania Workbencha i programów, które u¿ywaj±
+    standardowych pasków systemu
+  - wska¼nik zape³nienia w oknach dysków
+
+Do³±czone s± dwie skórki: Ofour (w stylu AmigaOS 4, autor Oliver Hummel)
+i OfourBlack (ciemna wersja Ofour).
+
+
+Instalacja
+----------
+Kliknij dwukrotnie "Install" i wybierz jêzyk. SkinPatch trafi do C:,
+SkinPrefs do SYS:Prefs, skórki do SYS:Prefs/Skins, t³umaczenia do
+LOCALE:Catalogs, a SkinPatch zostanie dodany do S:User-Startup.
+
+Przy aktualizacji uruchom Amigê ponownie po zakoñczeniu.
+
+
+SkinPrefs
+---------
+Otwórz SYS:Prefs/SkinPrefs, aby wybraæ:
+
+  Skórki                  u¿ywana skórka, z podgl±dem
+  Wysoko¶æ paska tytu³u   "Automatyczna" u¿ywa wysoko¶ci paska
+                          Workbencha; ka¿da skórka ma grafiki od 11 do 24
+  W³±czone                odznacz, aby wy³±czyæ SkinPatch
+  Wszystkie ekrany        skórki na wszystkich ekranach, nie tylko na
+                          Workbenchu
+  Ramka                   szeroko¶æ ramek nowych okien
+  Sprawd¼ aktualizacje    sprawdza w Aminecie, czy jest nowa wersja
+                          (wymaga po³±czenia z Internetem i dzia³aj±cego
+                          stosu TCP/IP, np. Roadshow)
+
+  Zapisz    zapisuje ustawienia i je stosuje
+  U¿yj      stosuje je do nastêpnego uruchomienia
+  Testuj    stosuje je i zostawia okno otwarte
+  Anuluj    przywraca poprzednie ustawienia
+
+SkinPrefs u¿ywa jêzyka wybranego podczas instalacji. Aby go zmieniæ,
+uruchom instalacjê ponownie.
+
+
+Uwagi
+-----
+  - Je¶li inne programy zmieniaj± te same funkcje systemu po SkinPatch
+    (VisualPrefs, MCP, TitleShadow...), SkinPatch nie mo¿e zostaæ
+    zatrzymany i dzia³a do ponownego uruchomienia.
+  - Pe³na dokumentacja (po angielsku) jest w pliku ReadMe.txt.
+
+
+Podziêkowania
+-------------
+SkinPatch i SkinPrefs: Isra Ortuno (Gogeta) - Amigatronics.
+Skórka Ofour: (C) 2005 Oliver Hummel. Do swobodnego rozpowszechniania
+(Mailware: je¶li ci siê podoba, wy¶lij mu e-mail). OfourBlack to
+przekolorowana wersja Ofour; ca³a zas³uga za grafikê nale¿y do Olivera
+Hummela.

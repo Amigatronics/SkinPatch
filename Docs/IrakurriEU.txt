@@ -1,0 +1,78 @@
+SkinPatch 1.4 - AmigaOS 3.x-ko leihoen azalak
+=============================================
+
+Isra Ortuño (Gogeta) - Amigatronics
+https://amigatronics.com  /  https://en.amigatronics.com
+amigatronics@amigatronics.com
+
+68000 mihiztadura-lengoaian idatzia, Claude-ren laguntzarekin
+(Anthropic-en AA).
+
+
+Zer egiten du
+-------------
+SkinPatch-ek Workbench pantailako leihoen itxura aldatzen du, MorphOS-eko
+azalen estiloan:
+
+  - leihoen botoiak: itxi, sakonera, zoom, ikonotu, pantailaren sakonera,
+    tamaina eta korritze-geziak
+  - titulu-barra (atzealde gradientea eta titulu zentratua)
+  - leihoen markoak (ezkerrekoa, eskuinekoa eta behekoa)
+  - Workbench-eko eta sistemaren barra estandarrak erabiltzen dituzten
+    programen korritze-barrak
+  - disko-leihoen betetze-adierazlea
+
+Bi azal daude: Ofour (AmigaOS 4 estiloa, Oliver Hummel-ena) eta
+OfourBlack (Ofour-en bertsio iluna).
+
+
+Instalazioa
+-----------
+Egin klik bikoitza "Install"-en eta aukeratu zure hizkuntza. SkinPatch
+C:-n instalatzen da, SkinPrefs SYS:Prefs-en, azalak SYS:Prefs/Skins-en eta
+itzulpenak LOCALE:Catalogs-en, eta SkinPatch S:User-Startup-era gehitzen
+da.
+
+Aurreko bertsio batetik eguneratzen baduzu, berrabiarazi Amiga amaitzean.
+
+
+SkinPrefs
+---------
+Ireki SYS:Prefs/SkinPrefs hauek aukeratzeko:
+
+  Azalak                   erabiltzen den azala, aurrebistarekin
+  Titulu-barraren altuera  "Automatikoa"-k Workbench-eko barraren
+                           altuera erabiltzen du; azal bakoitzak 11tik
+                           24rako irudiak ditu
+  Gaituta                  kendu marka SkinPatch desgaitzeko
+  Pantaila guztiak         azalak pantaila guztietan, ez Workbench-en
+                           bakarrik
+  Markoa                   leiho berrien markoen zabalera
+  Bilatu eguneraketak      Aminet-en bertsio berririk dagoen begiratzen du
+                           (Interneteko konexioa eta TCP/IP pila bat
+                           martxan behar dira, adibidez Roadshow)
+
+  Gorde     ezarpenak gordetzen eta aplikatzen ditu
+  Erabili   hurrengo berrabiarazi arte aplikatzen ditu
+  Probatu   aplikatu eta leihoa irekita uzten du
+  Utzi      aurreko ezarpenetara itzultzen da
+
+SkinPrefs-ek instalatzean aukeratutako hizkuntza erabiltzen du. Aldatzeko,
+abiarazi berriro instalatzailea.
+
+
+Oharrak
+-------
+  - Beste programa batzuek sistemaren funtzio berberak aldatzen badituzte
+    SkinPatch-en ondoren (VisualPrefs, MCP, TitleShadow...), SkinPatch ezin
+    da gelditu eta aktibo jarraitzen du berrabiarazi arte.
+  - Dokumentazio osoa (ingelesez) ReadMe.txt fitxategian dago.
+
+
+Kredituak
+---------
+SkinPatch eta SkinPrefs: Isra Ortuño (Gogeta) - Amigatronics.
+Ofour azala: (C) 2005 Oliver Hummel. Libreki bana daiteke (Mailware:
+gustatzen bazaizu, bidali mezu bat). OfourBlack Ofour-en bertsio
+birkoloreztatua da; jatorrizko diseinuaren merezimendu guztia Oliver
+Hummel-ena da.

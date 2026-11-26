@@ -1,0 +1,74 @@
+SkinPatch 1.4 - skins de xanelas para AmigaOS 3.x
+=================================================
+
+Isra Ortuño (Gogeta) - Amigatronics
+https://amigatronics.com  /  https://en.amigatronics.com
+amigatronics@amigatronics.com
+
+Escrito en ensamblador 68000 coa axuda de Claude (IA de Anthropic).
+
+
+Que fai
+-------
+SkinPatch cambia o aspecto das xanelas da pantalla do Workbench, ao
+estilo das skins de MorphOS:
+
+  - os botóns das xanelas: pechar, profundidade, zoom, iconificar,
+    profundidade de pantalla, tamaño e as frechas de desprazamento
+  - a barra de título (fondo degradado e título centrado)
+  - os marcos das xanelas (esquerdo, dereito e inferior)
+  - as barras de desprazamento do Workbench e dos programas que usan as
+    barras estándar do sistema
+  - o indicador de ocupación das xanelas de disco
+
+Inclúe dúas skins: Ofour (estilo AmigaOS 4, de Oliver Hummel) e
+OfourBlack (versión escura de Ofour).
+
+
+Instalación
+-----------
+Fai dobre clic en "Install" e escolle o teu idioma. Instálase SkinPatch
+en C:, SkinPrefs en SYS:Prefs, as skins en SYS:Prefs/Skins e as
+traducións en LOCALE:Catalogs, e engádese SkinPatch a S:User-Startup.
+
+Se actualizas desde unha versión anterior, reinicia o Amiga ao rematar.
+
+
+SkinPrefs
+---------
+Abre SYS:Prefs/SkinPrefs para escoller:
+
+  Skins                   a skin que se usa, con vista previa
+  Altura da barra         "Automática" usa a altura da barra do
+                          Workbench; cada skin trae debuxos de 11 a 24
+  Activado                desmárcao para desactivar SkinPatch
+  Todas as pantallas      skins en todas as pantallas, non só no
+                          Workbench
+  Marco                   ancho dos marcos das xanelas novas
+  Buscar actualizacións   mira en Aminet se hai unha versión nova
+                          (precisa conexión a Internet e unha pila TCP/IP
+                          en marcha, por exemplo Roadshow)
+
+  Gardar    garda os axustes e aplícaos
+  Usar      aplícaos ata o seguinte reinicio
+  Probar    aplícaos e deixa a xanela aberta
+  Cancelar  volve aos axustes anteriores
+
+SkinPrefs usa o idioma que escolliches ao instalar. Para cambialo, volve
+executar o instalador.
+
+
+Notas
+-----
+  - Se outros programas modifican as mesmas funcións do sistema despois
+    de SkinPatch (VisualPrefs, MCP, TitleShadow...), SkinPatch non se pode
+    deter e segue activo ata que reinicies.
+  - A documentación completa (en inglés) está en ReadMe.txt.
+
+
+Créditos
+--------
+SkinPatch e SkinPrefs: Isra Ortuño (Gogeta) - Amigatronics.
+Skin Ofour: (C) 2005 Oliver Hummel. Redistribuíble libremente (Mailware:
+se che gusta, envíalle un correo). OfourBlack é unha versión recolorida
+de Ofour; todo o mérito do deseño orixinal é de Oliver Hummel.
